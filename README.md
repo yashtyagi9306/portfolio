@@ -2,7 +2,7 @@
 
 Personal UI/UX portfolio of **Yash Tyagi** showcasing selected products, UX case studies, interface designs, and interactive digital experiences.
 
-🌐 **Live Website:** [yashtyagi.com](https://www.yashtyagi.com)  
+🌐 **Live Website:** https://portfolio-cashews.vercel.app/ 
 📦 **Repository:** [github.com/yashtyagi9306/portfolio](https://github.com/yashtyagi9306/portfolio)
 
 ---
