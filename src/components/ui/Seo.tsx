@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import { seo } from '../../data/site';
+import { seo, identity } from '../../data/site';
+
 
 type OpenGraphType = 'website' | 'profile' | 'article';
 type SchemaType = 'ProfilePage' | 'WebPage' | 'CollectionPage' | 'AboutPage' | 'CreativeWork';
@@ -94,7 +95,7 @@ function createStructuredData(
                 '@id': websiteId,
                 url: `${seo.siteUrl}/`,
                 name: seo.siteName,
-                alternateName: 'Yazan Tarifi Portfolio',
+                alternateName: `${identity.name} Portfolio`,
                 description: seo.description,
                 inLanguage: seo.language,
                 publisher: { '@id': personId },
@@ -102,15 +103,14 @@ function createStructuredData(
             {
                 '@type': 'Person',
                 '@id': personId,
-                name: 'Yazan Tarifi',
-                alternateName: ['Yazan98', 'yazan.tarifi'],
+                name: identity.name,
+                alternateName: [identity.handle, 'YashT98'],
                 url: `${seo.siteUrl}/`,
-                jobTitle: 'Senior Mobile Software Engineer',
-                description:
-                    'Mobile software engineer specializing in Android, Kotlin Multiplatform, Compose Multiplatform, iOS, developer tooling, and scalable backend systems.',
+                jobTitle: identity.role,
+                description: identity.intro,
                 homeLocation: {
                     '@type': 'Place',
-                    name: 'Amman, Jordan',
+                    name: identity.location,
                 },
                 sameAs: seo.sameAs,
                 knowsAbout: seo.knowsAbout,
@@ -192,14 +192,15 @@ const Seo: React.FC<SeoProps> = ({
         }
 
         if (pageOgType === 'profile') {
-            upsertMeta('property', 'profile:first_name', 'Yazan');
-            upsertMeta('property', 'profile:last_name', 'Tarifi');
-            upsertMeta('property', 'profile:username', 'YazanT98');
+            upsertMeta('property', 'profile:first_name', 'Yash');
+            upsertMeta('property', 'profile:last_name', 'Tyagi');
+            upsertMeta('property', 'profile:username', identity.handle);
         } else {
             removeMeta('property', 'profile:first_name');
             removeMeta('property', 'profile:last_name');
             removeMeta('property', 'profile:username');
         }
+
 
         upsertMeta('name', 'twitter:card', 'summary_large_image');
         upsertMeta('name', 'twitter:site', seo.twitter);

@@ -10,7 +10,7 @@ const Footer: React.FC = () => (
             <div className="flex flex-col gap-10 border-b border-white/10 pb-10 md:flex-row md:items-start md:justify-between">
                 <div className="max-w-sm">
                     <span className="font-display text-2xl font-bold tracking-[-0.02em]">
-                        {identity.handle}<span className="text-acc">_</span>
+                        {identity.name}<span className="text-acc">.</span>
                     </span>
                     <p className="mt-3 text-sm leading-relaxed text-white/60">{identity.tagline}</p>
                 </div>

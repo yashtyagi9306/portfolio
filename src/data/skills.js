@@ -1,77 +1,64 @@
 // ============================================================
-// Skills, core languages and focus areas.
-// Icons are imported locally (no external CDN) so they render
-// instantly and work offline.
+// Skills, core design tools and focus areas.
 // ============================================================
 
-import KotlinIcon from '../components/images/kotlin.webp';
-import RubyIcon from '../components/images/ruby.webp';
+import ReactIcon from '../components/images/react.webp';
 import TsIcon from '../components/images/ts.webp';
 import GitIcon from '../components/images/git.webp';
-import ReactIcon from '../components/images/react.webp';
-import NestIcon from '../components/images/nest.webp';
-import AndroidIcon from '../components/images/android.webp';
 
-// Core languages - rendered as typographic chips on the home page.
+// Core design tools & languages - rendered as typographic chips on the home page.
 export const languages = [
-  { name: 'Kotlin', role: 'Mobile / Backend' },
-  { name: 'Java', role: 'Enterprise' },
-  { name: 'TypeScript', role: 'Frontend / APIs' },
-  { name: 'Swift', role: 'iOS Native' },
-  { name: 'JavaScript', role: 'Web / Full-Stack' },
-  { name: 'Ruby', role: 'Scripting / CLIs' },
+  { name: 'Figma', role: 'UI / Wireframing' },
+  { name: 'Framer', role: 'Interactive Prototypes' },
+  { name: 'React.js', role: 'Frontend UI' },
+  { name: 'Tailwind CSS', role: 'Styling System' },
+  { name: 'JavaScript', role: 'Web Logic' },
+  { name: 'Python', role: 'Scripting' },
 ];
 
 // Detailed skills - used on the Skills page.
 const skills = [
   {
-    icon: KotlinIcon,
-    name: 'Kotlin',
+    icon: ReactIcon,
+    name: 'UI/UX & Visual Design',
     description:
-      'My primary language as an Android developer - Android apps, libraries, Kotlin Multiplatform and Gradle plugins. Also powers backends with Ktor and Spring Boot.',
-    tags: ['Android', 'Ktor Framework', 'Spring Boot', 'Gradle Plugins'],
-  },
-  {
-    icon: AndroidIcon,
-    name: 'Android Development',
-    description:
-      'Native Android apps with Kotlin and Gradle DSL using the latest technologies - Hilt, Jetpack Compose, Espresso, single-activity and multi-modular apps, offline caching, and MVVM / MVI / MVP.',
-    tags: ['Jetpack Compose', 'Hilt', 'Multi Modular', 'MVVM · MVI'],
+      'Designing modern, clean, user-centered digital interfaces with Figma and Framer. Focused on visual hierarchy, typography, whitespace, and micro-interactions.',
+    tags: ['Figma', 'Framer', 'Wireframing', 'Prototyping', 'Visual Design'],
   },
   {
     icon: TsIcon,
-    name: 'TypeScript',
+    name: 'User Research & Personas',
     description:
-      'Used for Node projects with an OOP style similar to Java. My main framework is Nest.js - building Socket.io implementations and MongoDB storage.',
-    tags: ['Mongo', 'Socket.io', 'Nest.js', 'CLIs'],
-  },
-  {
-    icon: NestIcon,
-    name: 'Nest.js',
-    description:
-      'My main framework for building APIs in TypeScript. I reach for it when I need Socket.io, chat-room logic and MongoDB queries in a structured, scalable codebase.',
-    tags: ['Nest.js', 'Socket.io', 'Node.js', 'TypeScript'],
+      'Mapping out user journeys, creating user personas, evaluating pain points, and conducting structured usability thinking to solve real user problems.',
+    tags: ['User Flows', 'Information Architecture', 'Pain Point Mapping', 'Usability'],
   },
   {
     icon: ReactIcon,
-    name: 'React.js',
+    name: 'Design Systems & Component Architecture',
     description:
-      'Websites built as SPAs / PWAs - installable on mobile, with caching, offline experience via service workers and fully interactive UIs powered by React Hooks.',
-    tags: ['PWA', 'React Hooks', 'Responsive', 'CSR'],
+      'Creating scalable design systems, UI component tokens, and reusable React.js + Tailwind CSS component libraries for production applications.',
+    tags: ['Design Systems', 'Component Libraries', 'Style Guides', 'Tokens'],
   },
   {
-    icon: RubyIcon,
-    name: 'Ruby',
+    icon: ReactIcon,
+    name: 'Frontend Development (Secondary)',
     description:
-      'My go-to for command-line tools that need third-party API calls and multithreading, plus Fastlane plugins - mainly for Android release automation.',
-    tags: ['CLIs', 'Fastlane Plugins', 'Gems'],
+      'Building responsive, accessible web interfaces using React.js, Tailwind CSS, JavaScript (ES6+), HTML5, and state management.',
+    tags: ['React.js', 'Tailwind CSS', 'State Management', 'REST API Integration'],
   },
   {
     icon: GitIcon,
-    name: 'Version Control',
+    name: 'Branding & Creative Strategy',
     description:
-      'Git every day across GitHub, GitLab and Bitbucket - branches, releases, local Git hooks to manage the development phase, and CI wiring.',
-    tags: ['GitHub', 'GitLab', 'Git Hooks', 'CI'],
+      'Directing end-to-end event branding, visual assets, posters, stage branding, and promotional creatives using Figma and Canva.',
+    tags: ['Branding', 'Visual Assets', 'Canva', 'Event Creatives'],
+  },
+  {
+    icon: GitIcon,
+    name: 'Developer & Collaboration Tools',
+    description:
+      'Using Git, GitHub, VS Code, and Power BI for team collaboration, version control, and data visualization.',
+    tags: ['Git', 'GitHub', 'VS Code', 'Power BI', 'MySQL'],
   },
 ];
 
@@ -80,3 +67,4 @@ export default skills;
 export function getSkills() {
   return skills;
 }
+

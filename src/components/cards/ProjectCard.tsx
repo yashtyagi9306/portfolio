@@ -23,13 +23,13 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         to={`/project/${project.slug}`}
         className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-line10 bg-paper no-underline transition-all duration-300 hover:-translate-y-1.5 hover:border-line14 hover:shadow-card"
     >
-        <div className="relative aspect-[8/7] w-full overflow-hidden bg-panel">
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-panel border-b border-line08">
             {project.image ? (
                 <img
                     src={project.image}
                     alt={project.name}
                     loading="lazy"
-                    className="h-full w-full object-cover object-center transition-transform duration-[700ms] group-hover:scale-[1.04]"
+                    className="h-full w-full object-cover object-top transition-transform duration-[700ms] group-hover:scale-[1.03]"
                 />
             ) : (
                 <div className="flex h-full w-full items-center justify-center font-mono text-xs text-white/40">

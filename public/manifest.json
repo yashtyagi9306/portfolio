@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "Yazan Tarifi Portfolio",
-  "short_name": "Yazan Tarifi",
-  "description": "Portfolio of Yazan Tarifi, a senior mobile engineer building Android, iOS, Kotlin Multiplatform, Compose Multiplatform, and scalable Spring Boot backends.",
+  "name": "Yash Tyagi Portfolio",
+  "short_name": "Yash Tyagi",
+  "description": "Portfolio of Yash Tyagi, a UI/UX Designer creating intuitive user experiences, scalable design systems, and responsive digital interfaces.",
   "lang": "en",
   "dir": "ltr",
   "start_url": "/",
@@ -45,7 +45,7 @@
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Yazan Tarifi portfolio"
+      "label": "Yash Tyagi portfolio"
     }
   ],
   "shortcuts": [

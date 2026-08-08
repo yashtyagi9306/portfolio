@@ -19,8 +19,8 @@ const ProjectsPage: React.FC = () => {
     return (
         <>
             <Seo
-                title="Projects"
-                description="Explore mobile apps, Kotlin Multiplatform products, Android and iOS projects, backend systems, developer tools, and websites built by Yazan Tarifi."
+                title="UX Projects & Case Studies"
+                description="Explore UI/UX case studies, user research projects, interactive prototypes, design systems, and digital product designs by Yash Tyagi."
                 path="/projects"
                 schemaType="CollectionPage"
             />
@@ -31,13 +31,14 @@ const ProjectsPage: React.FC = () => {
                         SELECTED WORK
                     </span>
                     <h1 className="m-0 font-display text-[clamp(40px,6vw,76px)] font-bold leading-[1.03] tracking-[-0.04em] text-ink" style={{ animation: 'fadeUp .6s .08s cubic-bezier(.2,.7,.2,1) both' }}>
-                        Projects<span className="text-acc">.</span>
+                        Projects & Case Studies<span className="text-acc">.</span>
                     </h1>
                     <p className="m-0 max-w-2xl text-[18px] leading-[1.65] text-ink3" style={{ animation: 'fadeUp .6s .16s cubic-bezier(.2,.7,.2,1) both' }}>
-                        Mobile apps, multiplatform products, backends and websites I’ve designed and built over the years.
+                        UX case studies, interface designs, interactive prototypes, and design systems focused on human-centered problem solving.
                     </p>
                 </div>
             </header>
+
 
             <Section padding="pt-8 pb-[clamp(64px,9vw,110px)]">
                 {/* Filters */}

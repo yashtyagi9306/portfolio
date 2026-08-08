@@ -145,26 +145,36 @@ const FeaturedProjects: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="relative min-h-[420px] overflow-hidden rounded-[24px] bg-[#EDE9DF] lg:min-h-full">
-                            <span className="pointer-events-none absolute -bottom-8 right-4 z-0 font-display text-[clamp(110px,16vw,260px)] font-bold leading-none tracking-[-0.08em] text-[#14130F]/[0.035]">
+                        <div className="relative flex min-h-[420px] items-center justify-center overflow-hidden rounded-[24px] bg-[#171612] p-4 sm:p-8 lg:min-h-full">
+                            <span className="pointer-events-none absolute -bottom-8 right-4 z-0 font-display text-[clamp(110px,16vw,260px)] font-bold leading-none tracking-[-0.08em] text-white/[0.03]">
                                 {current.year}
                             </span>
                             <div
                                 key={`visual-${current.id}`}
-                                className={`absolute inset-0 z-10 flex items-center justify-center p-3 sm:p-6 ${
+                                className={`relative z-10 w-full overflow-hidden rounded-[20px] border border-white/10 bg-[#1C1A14] shadow-[0_28px_70px_rgba(0,0,0,0.5)] ${
                                     direction === 'next' ? 'project-visual-next' : 'project-visual-previous'
                                 }`}
                             >
-                                {current.image ? (
-                                    <img
-                                        src={current.image}
-                                        alt={current.name}
-                                        loading={active === 0 ? 'eager' : 'lazy'}
-                                        className="max-h-full max-w-full rounded-[18px] object-contain shadow-[0_28px_70px_rgba(20,19,15,0.22)]"
-                                    />
-                                ) : (
-                                    <span className="font-display text-4xl font-bold text-ink">{current.name}</span>
-                                )}
+                                <div className="flex items-center gap-1.5 border-b border-white/10 bg-[#14130F] px-4 py-2.5">
+                                    <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
+                                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/80" />
+                                    <span className="h-2.5 w-2.5 rounded-full bg-green-400/80" />
+                                    <span className="ml-3 truncate font-mono text-[11px] text-white/40">
+                                        {current.name.toLowerCase().replace(/[^a-z0-9]/g, '')}.app
+                                    </span>
+                                </div>
+                                <div className="aspect-[16/10] w-full overflow-hidden bg-[#0C0B09]">
+                                    {current.image ? (
+                                        <img
+                                            src={current.image}
+                                            alt={current.name}
+                                            loading={active === 0 ? 'eager' : 'lazy'}
+                                            className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-[1.02]"
+                                        />
+                                    ) : (
+                                        <span className="flex h-full w-full items-center justify-center font-display text-4xl font-bold text-white">{current.name}</span>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>

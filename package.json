@@ -1,10 +1,10 @@
 {
-  "name": "my-app",
+  "name": "yash-tyagi-portfolio",
   "version": "6.0.0",
-  "homepage": "https://www.yazantarifi.com",
+  "homepage": "https://www.yashtyagi.com",
   "private": true,
-  "description": "Yazan Tarifi - Mobile Software Engineer. Personal portfolio (v6).",
-  "author": "Yazan Tarifi <yazantarifi98@gmail.com>",
+  "description": "Yash Tyagi - UI/UX Designer. Personal portfolio.",
+  "author": "Yash Tyagi <yashtyagi3333@gmail.com>",
   "license": "MIT",
   "keywords": [
     "Personal Website",

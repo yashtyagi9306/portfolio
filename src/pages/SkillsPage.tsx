@@ -16,8 +16,8 @@ const SkillsPage: React.FC = () => {
     return (
         <>
             <Seo
-                title="Skills"
-                description="Explore Yazan Tarifi's expertise in Kotlin, Android, Jetpack Compose, Kotlin Multiplatform, iOS, Spring Boot, backend systems, and developer tooling."
+                title="Skills & Tools"
+                description="Explore Yash Tyagi's UI/UX design skills, Figma prototyping, user research methodologies, design systems, and frontend implementation."
                 path="/skills"
                 schemaType="AboutPage"
             />
@@ -28,18 +28,18 @@ const SkillsPage: React.FC = () => {
                         TOOLBOX
                     </span>
                     <h1 className="m-0 font-display text-[clamp(40px,6vw,76px)] font-bold leading-[1.03] tracking-[-0.04em] text-ink" style={{ animation: 'fadeUp .6s .08s cubic-bezier(.2,.7,.2,1) both' }}>
-                        Skills<span className="text-acc">.</span>
+                        Skills & Tools<span className="text-acc">.</span>
                     </h1>
                     <p className="m-0 max-w-2xl text-[18px] leading-[1.65] text-ink3" style={{ animation: 'fadeUp .6s .16s cubic-bezier(.2,.7,.2,1) both' }}>
-                        The languages, frameworks and tools I use to build robust mobile products and the systems behind them.
+                        The design tools, prototyping software, and frontend technologies I use to craft human-centered digital products.
                     </p>
                 </div>
             </header>
 
-            {/* Core languages */}
+            {/* Core design tools */}
             <Section padding="pt-8 pb-[clamp(48px,7vw,80px)]">
                 <div className="flex flex-col gap-8">
-                    <SectionHeading eyebrow="01 - LANGUAGES" title="Core languages" />
+                    <SectionHeading eyebrow="01 - TOOLS" title="Design Tools & Tech" />
                     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                         {languages.map((l: { name: string; role: string }, i: number) => (
                             <Reveal key={l.name} delay={(i % 3) * 50}>
@@ -56,7 +56,7 @@ const SkillsPage: React.FC = () => {
             {/* Detailed skills */}
             <Section tone="paper" bordered>
                 <div className="flex flex-col gap-12">
-                    <SectionHeading eyebrow="02 - EXPERTISE" title="Frameworks & platforms" />
+                    <SectionHeading eyebrow="02 - EXPERTISE" title="Design Disciplines & Systems" />
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                         {skills.map((s: { icon: string; name: string; description: string; tags: string[] }, i: number) => (
                             <Reveal key={s.name} delay={(i % 2) * 80}>
@@ -70,7 +70,7 @@ const SkillsPage: React.FC = () => {
             {/* What I do */}
             <Section bordered>
                 <div className="flex flex-col gap-12">
-                    <SectionHeading eyebrow="03 - WHAT I DO" title="How I can help" />
+                    <SectionHeading eyebrow="03 - CAPABILITIES" title="How I bring value" />
                     <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
                         {services.map((s: { num: string; tag: string; title: string; description: string }, i: number) => (
                             <Reveal key={s.num} delay={(i % 4) * 70}>
@@ -87,5 +87,6 @@ const SkillsPage: React.FC = () => {
         </>
     );
 };
+
 
 export default SkillsPage;

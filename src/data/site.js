@@ -5,16 +5,17 @@
 // ============================================================
 
 export const identity = {
-  name: 'Yazan Tarifi',
-  handle: 'yazan.tarifi',
-  role: 'Mobile Software Engineer',
-  location: 'Amman, Jordan',
-  email: 'yazantarifi989@gmail.com',
-  resume: '/resume.pdf',
+  name: 'Yash Tyagi',
+  handle: 'yashtyagi21',
+  role: 'UI/UX Designer',
+  location: 'Ghaziabad, UP, India',
+  email: 'yashtyagi3333@gmail.com',
+  phone: '+91 7017822724',
+  resume: 'mailto:yashtyagi3333@gmail.com',
   tagline:
-    'I design and build polished mobile apps backed by reliable systems, turning product ideas into fast, intuitive experiences that scale.',
+    'I design intuitive user experiences, scalable design systems, and responsive interfaces that solve usability problems and delight users.',
   intro:
-    'Mobile-first engineer focused on shared logic, offline-first products and clean architecture. I ship one Kotlin codebase to both platforms and back it with reliable APIs.',
+    'UI/UX Designer with a strong background in user-centered design, wireframing, prototyping, and design systems. I combine visual aesthetics with functional frontend development to craft seamless digital products.',
 };
 
 // Primary navigation (rendered in the navbar + footer)
@@ -26,64 +27,53 @@ export const navLinks = [
 
 // Social / external links. `icon` maps to a key in the <Icon> component.
 export const socials = [
-  { label: 'GitHub', icon: 'github', href: 'https://github.com/Yazan98' },
-  { label: 'LinkedIn', icon: 'linkedin', href: 'https://linkedin.com/in/yazantarifi' },
-  { label: 'X', icon: 'x', href: 'https://x.com/YazanT98' },
-  { label: 'Medium', icon: 'medium', href: 'https://medium.com/@yazantarifi98' },
-  { label: 'Email', icon: 'mail', href: 'mailto:yazantarifi989@gmail.com' },
+  { label: 'LinkedIn', icon: 'linkedin', href: 'https://linkedin.com/in/yashtyagi21' },
+  { label: 'GitHub', icon: 'github', href: 'https://github.com/yashtyagi9306' },
+  { label: 'Email', icon: 'mail', href: 'mailto:yashtyagi3333@gmail.com' },
 ];
 
 export const primaryLinks = {
-  github: 'https://github.com/Yazan98',
-  linkedin: 'https://linkedin.com/in/yazantarifi',
-  medium: 'https://medium.com/@yazantarifi98',
-  mediumFeed: 'https://medium.com/feed/@yazantarifi98',
-  email: 'mailto:yazantarifi989@gmail.com',
+  github: 'https://github.com/yashtyagi9306',
+  linkedin: 'https://linkedin.com/in/yashtyagi21',
+  email: 'mailto:yashtyagi3333@gmail.com',
 };
 
 // SEO defaults used by <Seo> / <Helmet>
 export const seo = {
-  siteUrl: 'https://www.yazantarifi.com',
-  siteName: 'Yazan Tarifi',
+  siteUrl: 'https://www.yashtyagi.com',
+  siteName: 'Yash Tyagi',
   language: 'en',
   locale: 'en_US',
-  defaultTitle: 'Yazan Tarifi | Mobile and Kotlin Multiplatform Engineer',
-  titleTemplate: '%s | Yazan Tarifi',
+  defaultTitle: 'Yash Tyagi | UI/UX Designer & Product Interface Creator',
+  titleTemplate: '%s | Yash Tyagi',
   description:
-    'Portfolio of Yazan Tarifi, a senior mobile engineer building Android, iOS, Kotlin Multiplatform, Compose Multiplatform, and scalable Spring Boot backends.',
-  image: 'https://www.yazantarifi.com/banner.png',
-  imageAlt: 'Yazan Tarifi mobile software engineer portfolio',
+    'Portfolio of Yash Tyagi, a UI/UX Designer specializing in user research, wireframing, interactive prototyping, visual design systems, and clean frontend interfaces.',
+  image: 'https://www.yashtyagi.com/banner.png',
+  imageAlt: 'Yash Tyagi UI/UX Designer portfolio',
   imageType: 'image/png',
   imageWidth: 1280,
   imageHeight: 720,
-  twitter: '@YazanT98',
+  twitter: '@YashT98',
   sameAs: [
-    'https://github.com/Yazan98',
-    'https://linkedin.com/in/yazantarifi',
-    'https://x.com/YazanT98',
-    'https://medium.com/@yazantarifi98',
+    'https://github.com/yashtyagi9306',
+    'https://linkedin.com/in/yashtyagi21',
   ],
   knowsAbout: [
-    'Android development',
-    'Kotlin',
-    'Jetpack Compose',
-    'Kotlin Multiplatform',
-    'Compose Multiplatform',
-    'iOS development',
-    'Swift',
-    'SwiftUI',
-    'Kotlin Coroutines',
-    'Mobile architecture',
-    'Spring Boot',
-    'Spring Data JPA',
-    'Ktor',
-    'NestJS',
-    'PostgreSQL',
-    'Firebase',
-    'Docker',
-    'REST API design',
-    'Developer tooling',
-    'SaaS development',
+    'UI Design',
+    'UX Design',
+    'User Research',
+    'Wireframing',
+    'Prototyping',
+    'Design Systems',
+    'Interaction Design',
+    'Visual Design',
+    'Accessibility',
+    'Figma',
+    'Framer',
+    'Canva',
+    'React.js',
+    'Tailwind CSS',
+    'JavaScript',
   ],
 };
 
@@ -95,6 +85,7 @@ export const accents = [
 ];
 
 export const footer = {
-  copyright: `© ${new Date().getFullYear()} Yazan Tarifi. All rights reserved.`,
-  note: 'Designed & built with React, Vite and Tailwind.',
+  copyright: `© ${new Date().getFullYear()} Yash Tyagi. All rights reserved.`,
+  note: 'Designed & crafted with a focus on usability, clean UI, and performance.',
 };
+

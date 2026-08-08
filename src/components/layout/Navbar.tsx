@@ -6,19 +6,24 @@ import { useTheme } from '../../theme/ThemeProvider';
 import { identity, navLinks, primaryLinks } from '../../data/site';
 
 const Logo: React.FC = () => (
-    <Link to="/" className="flex items-center gap-[11px] no-underline text-ink" aria-label={`${identity.name} - home`}>
-        <img src="/logo.png" alt={`${identity.name} logo`} className="h-[38px] w-[38px] rounded-xl object-cover" />
-        <span className="flex flex-col leading-[1.15]">
-            <span className="font-display text-[16px] font-bold tracking-[-0.02em]">
-                {identity.handle}
-                <span className="text-acc" style={{ animation: 'blink 1.2s step-end infinite' }}>_</span>
-            </span>
-            <span className="hidden min-[360px]:block font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-ink2">
+    <Link to="/" className="group flex items-center gap-3 no-underline text-ink" aria-label={`${identity.name} - home`}>
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-line14 bg-panel p-1 shadow-sm transition-transform duration-200 group-hover:scale-[1.04]">
+            <img src="/logo.png" alt={`${identity.name} logo`} className="h-full w-full object-contain rounded-lg" />
+        </div>
+        <div className="flex flex-col justify-center gap-0.5">
+            <div className="flex items-center gap-1.5 leading-none">
+                <span className="font-display text-[16px] font-bold tracking-[-0.02em] text-ink">
+                    {identity.name}
+                </span>
+                <span className="h-1.5 w-1.5 rounded-full bg-acc" />
+            </div>
+            <span className="font-mono text-[10.5px] font-semibold uppercase tracking-[0.1em] text-ink2 leading-none">
                 {identity.role}
             </span>
-        </span>
+        </div>
     </Link>
 );
+
 
 const ThemeToggle: React.FC = () => {
     const { theme, toggleTheme } = useTheme();

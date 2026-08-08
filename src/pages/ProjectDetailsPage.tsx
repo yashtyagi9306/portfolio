@@ -7,7 +7,7 @@ import SectionHeading from '../components/ui/SectionHeading';
 import Button from '../components/ui/Button';
 import Icon, { IconName } from '../components/ui/Icon';
 import { TagList } from '../components/ui/Chip';
-import { BannerFrame, PhoneMockup } from '../components/ui/Frames';
+import { BannerFrame, WebMockup } from '../components/ui/Frames';
 import FeatureCard from '../components/cards/FeatureCard';
 import NextProjectCard from '../components/cards/NextProjectCard';
 // @ts-ignore - data module authored in JS
@@ -132,7 +132,13 @@ const ProjectDetailsPage: React.FC = () => {
             <section className="bg-bg px-[clamp(20px,5vw,48px)] pt-7">
                 <div className="mx-auto max-w-content">
                     <Reveal>
-                        <BannerFrame src={project.banner || project.image} alt={`${project.name} - banner`} eager fit="contain" />
+                        <BannerFrame
+                            src={project.banner || project.image}
+                            alt={`${project.name} - banner`}
+                            eager
+                            fit="cover"
+                            url={project.links?.live}
+                        />
                     </Reveal>
                 </div>
             </section>
@@ -157,11 +163,38 @@ const ProjectDetailsPage: React.FC = () => {
                 </div>
             </Section>
 
+            {/* UX Case Study Breakdown */}
+            {(project.problemStatement || project.research?.length > 0) && (
+                <Section tone="paper" bordered>
+                    <div className="flex flex-col gap-10">
+                        <SectionHeading eyebrow="02 - CASE STUDY" title="Problem & Research" />
+                        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                            {project.problemStatement && (
+                                <Reveal className="flex flex-col gap-3 rounded-[20px] border border-line10 bg-bg p-6">
+                                    <span className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-acc">Problem Statement</span>
+                                    <p className="m-0 text-[16px] leading-[1.65] text-ink">{project.problemStatement}</p>
+                                </Reveal>
+                            )}
+                            {project.research?.length > 0 && (
+                                <Reveal className="flex flex-col gap-3 rounded-[20px] border border-line10 bg-bg p-6">
+                                    <span className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-acc">User Research & Insights</span>
+                                    <ul className="m-0 flex flex-col gap-2 p-0 pl-4 text-[15px] leading-[1.6] text-ink2">
+                                        {project.research.map((r: string, idx: number) => (
+                                            <li key={idx}>{r}</li>
+                                        ))}
+                                    </ul>
+                                </Reveal>
+                            )}
+                        </div>
+                    </div>
+                </Section>
+            )}
+
             {/* Features */}
             {project.features?.length > 0 && (
                 <Section tone="paper" bordered>
                     <div className="flex flex-col gap-12">
-                        <SectionHeading eyebrow="02 - WHAT’S INSIDE" title="Key features" />
+                        <SectionHeading eyebrow="03 - HIGHLIGHTS" title="Key features & UX details" />
                         <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
                             {project.features.map((f: { title: string; desc: string }, i: number) => (
                                 <Reveal key={f.title} delay={(i % 4) * 70}>
@@ -173,32 +206,43 @@ const ProjectDetailsPage: React.FC = () => {
                 </Section>
             )}
 
-            {/* Screens */}
+            {/* Screens & Visuals */}
             {screens.length > 0 && (
                 <Section bordered>
                     <div className="flex flex-col gap-12">
                         <SectionHeading
-                            eyebrow="03 - ALL SCREENS"
-                            title="Inside the product"
-                            description={`${screens.length} app screens, presented in full without cropping.`}
+                            eyebrow="04 - VISUAL DESIGN"
+                            title="Interface Mockups & Screens"
+                            description={`${screens.length} high-fidelity screens presenting user interface flows.`}
                         />
-                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-6">
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                             {screens.map((src, i) => (
                                 <Reveal
                                     key={i}
-                                    delay={(i % 4) * 70}
+                                    delay={(i % 2) * 100}
                                     className="w-full"
                                 >
-                                    <PhoneMockup
+                                    <WebMockup
                                         src={src}
                                         alt={`${project.name} - screen ${i + 1}`}
-                                        fit="contain"
-                                        className="max-w-none"
+                                        fit="cover"
                                     />
                                 </Reveal>
                             ))}
                         </div>
                     </div>
+                </Section>
+            )}
+
+            {/* Reflection */}
+            {project.reflection && (
+                <Section tone="paper" bordered>
+                    <Reveal className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+                        <span className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-acc">Reflection & Takeaways</span>
+                        <blockquote className="m-0 text-xl font-medium italic leading-[1.6] text-ink">
+                            "{project.reflection}"
+                        </blockquote>
+                    </Reveal>
                 </Section>
             )}
 
@@ -213,3 +257,4 @@ const ProjectDetailsPage: React.FC = () => {
 };
 
 export default ProjectDetailsPage;
+

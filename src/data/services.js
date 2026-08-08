@@ -5,38 +5,38 @@
 const services = [
   {
     num: '01',
-    tag: 'Mobile',
-    title: 'Android Development',
+    tag: 'Research',
+    title: 'User Research & Insights',
     description:
-      'Native Android apps built with Kotlin and Jetpack Compose on a clean, multi-modular architecture - Hilt, Coroutines, Room and WorkManager - and shipped to Google Play.',
+      'Uncovering user needs, mapping pain points, defining personas, and conducting usability testing to ensure design decisions are backed by real user behavior.',
   },
   {
     num: '02',
-    tag: 'Mobile',
-    title: 'iOS Development',
+    tag: 'Design',
+    title: 'UI/UX & Interaction Design',
     description:
-      'Native iOS apps with Swift and SwiftUI - Kotlin Multiplatform libraries integrated across iOS and Android, GraphQL and REST clients with Alamofire, plus local persistence with Realm.',
+      'Crafting clean, accessible, intuitive interfaces with visual hierarchy, micro-interactions, and high-fidelity mockups using Figma and modern design tools.',
   },
   {
     num: '03',
-    tag: 'Multiplatform',
-    title: 'Compose & Kotlin Multiplatform',
+    tag: 'Prototyping',
+    title: 'Wireframing & Prototyping',
     description:
-      'Shared UI, business logic and data layers for Android and iOS with Compose Multiplatform and Kotlin Multiplatform, using Ktor, Coroutines and offline-first architecture with platform-specific integrations where they add real value.',
+      'Transforming product concepts into low to high-fidelity wireframes and interactive prototypes to validate user flows before production.',
   },
   {
     num: '04',
-    tag: 'Backend',
-    title: 'APIs & Backend',
+    tag: 'Systems',
+    title: 'Design Systems & UI Libraries',
     description:
-      'Production APIs with NestJS, Spring Boot and Ktor - REST and real-time Socket.IO services, JWT auth and TypeORM in clean, testable service layers.',
+      'Building scalable, modular design systems with reusable components, clear typography guidelines, color palettes, and accessibility standards.',
   },
   {
     num: '05',
-    tag: 'Tooling',
-    title: 'Developer Tools & CLIs',
+    tag: 'Frontend',
+    title: 'Frontend Implementation',
     description:
-      'Developer tools built with scripts, custom commands, Fastlane plugins and JavaScript CLIs to automate repetitive workflows, improve release pipelines and make teams more productive.',
+      'Translating UI/UX designs into pixel-perfect, responsive React.js and Tailwind CSS interfaces, ensuring state management and usability are built in.',
   },
 ];
 
@@ -49,3 +49,4 @@ export default getServices;
 
 // Also expose the raw array for direct consumers.
 export { services };
+

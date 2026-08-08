@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404
 
-Sitemap: https://www.yazantarifi.com/sitemap.xml
+Sitemap: https://www.yashtyagi.com/sitemap.xml

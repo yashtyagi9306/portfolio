@@ -1,36 +1,35 @@
 // ============================================================
-// Articles - fallback list used when the live Medium feed
-// can't be fetched. The <Articles> section fetches the RSS
-// feed first and falls back to these entries.
+// Articles & Insights - design thinking, UI/UX methodologies,
+// and frontend architecture notes.
 // ============================================================
 
 const articles = [
   {
-    title: 'Scaling Backend Architecture with NestJS & Microservices',
+    title: 'Building Scalable Design Systems with Tokens & Component Specs',
     description:
-      'A guide to transitioning a monolithic backend into scalable microservices using NestJS, Redis and message queues.',
-    date: 'Nov 15, 2025',
-    readTime: '8 min read',
-    link: 'https://medium.com/@yazantarifi98',
-    tags: ['Backend', 'NestJS', 'Architecture'],
-  },
-  {
-    title: 'Exploring Kotlin Multiplatform: The Future of Code Sharing',
-    description:
-      'How Kotlin Multiplatform lets you share business logic across Android, iOS and web without compromising performance.',
-    date: 'Oct 02, 2025',
+      'How to establish consistent color palettes, typography scales, and reusable UI tokens that bridge the gap between design in Figma and code in React.',
+    date: 'Jan 2026',
     readTime: '6 min read',
-    link: 'https://medium.com/@yazantarifi98',
-    tags: ['Mobile', 'KMP', 'Kotlin'],
+    link: 'https://linkedin.com/in/yashtyagi21',
+    tags: ['Design Systems', 'Figma', 'UI Tokens'],
   },
   {
-    title: 'Mastering Database Design for High Concurrency',
+    title: 'Designing for Usability: User Flow Mapping & Accessibility First',
     description:
-      'Optimizing relational databases for high concurrency and large data volumes - indexing, partitioning and caching.',
-    date: 'Aug 20, 2025',
-    readTime: '12 min read',
-    link: 'https://medium.com/@yazantarifi98',
-    tags: ['Database', 'Architecture', 'SQL'],
+      'Best practices for structuring user journeys, reducing cognitive load, and adhering to WCAG standards for accessible digital experiences.',
+    date: 'Dec 2025',
+    readTime: '5 min read',
+    link: 'https://linkedin.com/in/yashtyagi21',
+    tags: ['UX Research', 'Accessibility', 'User Flow'],
+  },
+  {
+    title: 'Architecting AI-Powered Debates: Micro-Interactions & Feedback UX',
+    description:
+      'Designing turn-based interfaces and real-time feedback loops that make AI scoring intuitive, transparent, and engaging for users.',
+    date: 'Nov 2025',
+    readTime: '7 min read',
+    link: 'https://linkedin.com/in/yashtyagi21',
+    tags: ['Interaction Design', 'AI UX', 'Prototyping'],
   },
 ];
 
@@ -39,3 +38,4 @@ export default articles;
 export function getArticles() {
   return articles;
 }
+

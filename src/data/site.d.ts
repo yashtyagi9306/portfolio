@@ -1,3 +1,15 @@
+export interface Identity {
+  name: string;
+  handle: string;
+  role: string;
+  location: string;
+  email: string;
+  phone?: string;
+  resume: string;
+  tagline: string;
+  intro: string;
+}
+
 export interface SeoConfig {
   siteUrl: string;
   siteName: string;
@@ -16,4 +28,11 @@ export interface SeoConfig {
   knowsAbout: string[];
 }
 
+export const identity: Identity;
 export const seo: SeoConfig;
+export const navLinks: Array<{ label: string; to: string }>;
+export const socials: Array<{ label: string; icon: string; href: string }>;
+export const primaryLinks: Record<string, string>;
+export const accents: Array<{ value: string; label: string; color: string }>;
+export const footer: { copyright: string; note: string };
+
